@@ -49,12 +49,32 @@ static void create_ui()
   t1 = lv_tileview_add_tile(tileview, 0, 0, LV_DIR_HOR);
   t2 = lv_tileview_add_tile(tileview, 1, 0, LV_DIR_HOR);
 
-  // Tile #1
+ // Tile #1
   {
     t1_label = lv_label_create(t1);
-    lv_label_set_text(t1_label, "Hello Students");
-    lv_obj_set_style_text_font(t1_label, &lv_font_montserrat_28, 0);
+
+    // Set vertically stacked text using newlines (\n)
+    lv_label_set_text(t1_label,
+                      "PIBT, V1, G11\n"
+                      "Noah Strandberg\n"
+                      "Felicia Rönnberg\n"
+                      "Shudhit Singh\n"
+                      "Alex Erlandsson\n"
+                      "Gabriel Eriksson");
+
+    // Use a smaller font so all 6 lines fit vertically on the display
+    lv_obj_set_style_text_font(t1_label, &lv_font_montserrat_16, 0);
+
+    // Center the text alignment horizontally
+    lv_obj_set_style_text_align(t1_label, LV_TEXT_ALIGN_CENTER, 0);
+
+    // Enable automatic text wrapping and limit width to 90% of screen width
+    lv_label_set_long_mode(t1_label, LV_LABEL_LONG_WRAP);
+    lv_obj_set_width(t1_label, lv_pct(90));
+
+    // Center the entire label block on the tile
     lv_obj_center(t1_label);
+
     apply_tile_colors(t1, t1_label, /*dark=*/false);
   }
 
@@ -69,6 +89,7 @@ static void create_ui()
     lv_obj_add_flag(t2, LV_OBJ_FLAG_CLICKABLE);
     lv_obj_add_event_cb(t2, on_tile2_clicked, LV_EVENT_CLICKED, NULL);
   }
+  
 }
 
 // Function: Connects to WIFI
