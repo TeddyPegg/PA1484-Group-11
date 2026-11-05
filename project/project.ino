@@ -9,88 +9,14 @@
 #include <lvgl.h>
 
 #include "secrets.h"
+#include "timetable.h"
+#include "ui_manager.h"
+#include "header.h"
+
+// Custom font supporting Swedish characters (Å,Ä,Ö)
+LV_FONT_DECLARE(font_montserrat_16);
 
 LilyGo_Class amoled;
-
-static lv_obj_t* tileview;
-static lv_obj_t* t1;
-static lv_obj_t* t2;
-static lv_obj_t* t1_label;
-static lv_obj_t* t2_label;
-static bool t2_dark = false;  // start tile #2 in light mode
-
-// Function: Tile #2 Color change
-static void apply_tile_colors(lv_obj_t* tile, lv_obj_t* label, bool dark)
-{
-  // Background
-  lv_obj_set_style_bg_opa(tile, LV_OPA_COVER, 0);
-  lv_obj_set_style_bg_color(tile, dark ? lv_color_black() : lv_color_white(), 0);
-
-  // Text
-  lv_obj_set_style_text_color(label, dark ? lv_color_white() : lv_color_black(), 0);
-}
-
-static void on_tile2_clicked(lv_event_t* e)
-{
-  LV_UNUSED(e);
-  t2_dark = !t2_dark;
-  apply_tile_colors(t2, t2_label, t2_dark);
-}
-
-// Function: Creates UI
-static void create_ui()
-{
-  // Fullscreen Tileview
-  tileview = lv_tileview_create(lv_scr_act());
-  lv_obj_set_size(tileview, lv_disp_get_hor_res(NULL), lv_disp_get_ver_res(NULL));
-  lv_obj_set_scrollbar_mode(tileview, LV_SCROLLBAR_MODE_OFF);
-
-  // Add two horizontal tiles
-  t1 = lv_tileview_add_tile(tileview, 0, 0, LV_DIR_HOR);
-  t2 = lv_tileview_add_tile(tileview, 1, 0, LV_DIR_HOR);
-
- // Tile #1
-  {
-    t1_label = lv_label_create(t1);
-
-    // Set vertically stacked text using newlines (\n)
-    lv_label_set_text(t1_label,
-                      "PIBT, V1, G11\n"
-                      "Noah Strandberg\n"
-                      "Felicia Rönnberg\n"
-                      "Shudhit Singh\n"
-                      "Alex Erlandsson\n"
-                      "Gabriel Eriksson");
-
-    // Use a smaller font so all 6 lines fit vertically on the display
-    lv_obj_set_style_text_font(t1_label, &lv_font_montserrat_16, 0);
-
-    // Center the text alignment horizontally
-    lv_obj_set_style_text_align(t1_label, LV_TEXT_ALIGN_CENTER, 0);
-
-    // Enable automatic text wrapping and limit width to 90% of screen width
-    lv_label_set_long_mode(t1_label, LV_LABEL_LONG_WRAP);
-    lv_obj_set_width(t1_label, lv_pct(90));
-
-    // Center the entire label block on the tile
-    lv_obj_center(t1_label);
-
-    apply_tile_colors(t1, t1_label, /*dark=*/false);
-  }
-
-  // Tile #2
-  {
-    t2_label = lv_label_create(t2);
-    lv_label_set_text(t2_label, "Welcome to the workshop");
-    lv_obj_set_style_text_font(t2_label, &lv_font_montserrat_28, 0);
-    lv_obj_center(t2_label);
-
-    apply_tile_colors(t2, t2_label, /*dark=*/false);
-    lv_obj_add_flag(t2, LV_OBJ_FLAG_CLICKABLE);
-    lv_obj_add_event_cb(t2, on_tile2_clicked, LV_EVENT_CLICKED, NULL);
-  }
-  
-}
 
 // Function: Connects to WIFI
 static void connect_wifi()
@@ -118,15 +44,29 @@ void setup()
   Serial.begin(115200);
   delay(200);
 
+  // initialize the AMOLED display hardware and touchscreen controller
   if (!amoled.begin()) {
     Serial.println("Failed to init LilyGO AMOLED.");
     while (true) delay(1000);
   }
+  
+  beginLvglHelper(amoled);
 
-  beginLvglHelper(amoled);   // init LVGL for this board
+  // set the default theme with custom font to ensure Å,Ä,Ö renders correctly without becoming a box
+  lv_theme_t * th = lv_theme_default_init(
+    lv_disp_get_default(), 
+    lv_palette_main(LV_PALETTE_BLUE), 
+    lv_palette_main(LV_PALETTE_CYAN),
+    true, 
+    &font_montserrat_16
+  );
+  lv_disp_set_theme(lv_disp_get_default(), th);
 
-  create_ui();
-  connect_wifi();
+  lv_obj_set_style_text_font(lv_scr_act(), &font_montserrat_16, 0);
+
+  connect_wifi(); // connects wifi
+  
+  ui_init(); // intializes the entire UI
 }
 
 // Must have function: Loop runs continously on device after setup
