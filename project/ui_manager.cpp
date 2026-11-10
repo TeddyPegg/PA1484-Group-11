@@ -174,7 +174,7 @@ void ui_init(void) {
         lv_obj_add_state(sw_darkmode, LV_STATE_CHECKED);
     } else {
         lv_obj_clear_state(sw_darkmode, LV_STATE_CHECKED);
-    }
+    } 
     lv_obj_add_event_cb(sw_darkmode, darkmode_switch_event_cb, LV_EVENT_VALUE_CHANGED, NULL);
 
     // apply color theme according to initial state
