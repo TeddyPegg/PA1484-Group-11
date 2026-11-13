@@ -11,7 +11,6 @@
 #include "secrets.h"
 #include "timetable.h"
 #include "ui_manager.h"
-#include "header.h"
 
 // Custom font supporting Swedish characters (Å,Ä,Ö)
 LV_FONT_DECLARE(font_montserrat_16);
