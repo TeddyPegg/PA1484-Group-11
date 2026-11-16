@@ -1,0 +1,3806 @@
+{
+    "query": {
+        "query": null,
+        "queryTime": "2026-11-15T22:05:05"
+    },
+    "stop_groups": [
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 1.33,
+            "id": "740011100",
+            "name": "Mölletorp",
+            "stops": [
+                {
+                    "id": "24310",
+                    "lat": 56.217268,
+                    "lon": 15.670038,
+                    "name": "Mölletorp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 51.4,
+            "id": "740011166",
+            "name": "Nättraby skola",
+            "stops": [
+                {
+                    "id": "24434",
+                    "lat": 56.204728,
+                    "lon": 15.528838,
+                    "name": "Nättraby skola"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 80.92,
+            "id": "740011165",
+            "name": "Nättraby Dalby",
+            "stops": [
+                {
+                    "id": "24431",
+                    "lat": 56.204353,
+                    "lon": 15.537687,
+                    "name": "Dalby"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 12.73,
+            "id": "740011061",
+            "name": "Mjövikstrandsv",
+            "stops": [
+                {
+                    "id": "24439",
+                    "lat": 56.187824,
+                    "lon": 15.527785,
+                    "name": "Mjövikstrandsv"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 18.37,
+            "id": "740011344",
+            "name": "Senoren vägskäl",
+            "stops": [
+                {
+                    "id": "24282",
+                    "lat": 56.12357,
+                    "lon": 15.73581,
+                    "name": "Senoren"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 2.0,
+            "id": "740011253",
+            "name": "Allatorp",
+            "stops": [
+                {
+                    "id": "24447",
+                    "lat": 56.218689,
+                    "lon": 15.594453,
+                    "name": "Allatorp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 86.75,
+            "id": "740011293",
+            "name": "Rödeby Ek",
+            "stops": [
+                {
+                    "id": "24330",
+                    "lat": 56.248074,
+                    "lon": 15.621955,
+                    "name": "Rödeby Ek"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 208.2,
+            "id": "740040917",
+            "name": "Karlskrona Amiralitetstorget",
+            "stops": [
+                {
+                    "id": "24483",
+                    "lat": 56.159065,
+                    "lon": 15.58498,
+                    "name": "Amiralitetstorget"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 708.88,
+            "id": "740001537",
+            "name": "Bergåsa station",
+            "stops": [
+                {
+                    "id": "1537",
+                    "lat": 56.182633,
+                    "lon": 15.601351,
+                    "name": "Bergåsa station"
+                }
+            ],
+            "transport_modes": [
+                "BUS",
+                "TRAIN"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 41.32,
+            "id": "740025541",
+            "name": "Nättraby kyrka",
+            "stops": [
+                {
+                    "id": "24432",
+                    "lat": 56.201361,
+                    "lon": 15.537144,
+                    "name": "Nättraby kyrka"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.67,
+            "id": "740074573",
+            "name": "Grönadals brygga",
+            "stops": [
+                {
+                    "id": "24480",
+                    "lat": 56.174544,
+                    "lon": 15.517432,
+                    "name": "Grönadals brygga"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 5.0,
+            "id": "740074440",
+            "name": "Wämöparken brygga",
+            "stops": [
+                {
+                    "id": "24515",
+                    "lat": 56.177895,
+                    "lon": 15.609507,
+                    "name": "Wämöparken brygga"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.0,
+            "id": "740074437",
+            "name": "Pottholmen brygga",
+            "stops": [
+                {
+                    "id": "24516",
+                    "lat": 56.166027,
+                    "lon": 15.580932,
+                    "name": "Pottholmen brygga"
+                }
+            ],
+            "transport_modes": []
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 10.0,
+            "id": "740074438",
+            "name": "Saltö Fiskhamn brygga",
+            "stops": [
+                {
+                    "id": "24517",
+                    "lat": 56.163544,
+                    "lon": 15.569036,
+                    "name": "Saltö Fiskhamn brygga"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 5.0,
+            "id": "740074431",
+            "name": "Skeppsbron brygga",
+            "stops": [
+                {
+                    "id": "74230",
+                    "lat": 56.167836,
+                    "lon": 15.593252,
+                    "name": "Skeppsbron brygga"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 10.0,
+            "id": "740074432",
+            "name": "Björkholmen brygga",
+            "stops": [
+                {
+                    "id": "24518",
+                    "lat": 56.162227,
+                    "lon": 15.570541,
+                    "name": "Björkholmen brygga"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "META_STOP",
+            "average_daily_stop_times": 1204.6699,
+            "id": "740098084",
+            "name": "Karlskrona",
+            "stops": [
+                {
+                    "id": "230",
+                    "lat": 56.166709,
+                    "lon": 15.585387,
+                    "name": "Karlskrona Centralstation"
+                },
+                {
+                    "id": "24116",
+                    "lat": 56.165202,
+                    "lon": 15.586844,
+                    "name": "Kungsplan"
+                },
+                {
+                    "id": "73602",
+                    "lat": 56.165515,
+                    "lon": 15.586807,
+                    "name": "Kungsplan Hoglands Park"
+                },
+                {
+                    "id": "73624",
+                    "lat": 56.167057,
+                    "lon": 15.585251,
+                    "name": "Karlskrona central"
+                }
+            ],
+            "transport_modes": [
+                "BOAT",
+                "BUS",
+                "TRAIN"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.0,
+            "id": "740078775",
+            "name": "Trummenäs Camping",
+            "stops": [
+                {
+                    "id": "73839",
+                    "lat": 56.160964,
+                    "lon": 15.73035,
+                    "name": "Trummenäs Camping"
+                }
+            ],
+            "transport_modes": []
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 170.0,
+            "id": "740031827",
+            "name": "Kungsmarken centrum",
+            "stops": [
+                {
+                    "id": "24154",
+                    "lat": 56.194299,
+                    "lon": 15.623953,
+                    "name": "Kungsmarken centrum"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 170.0,
+            "id": "740031828",
+            "name": "Gullaberg",
+            "stops": [
+                {
+                    "id": "24155",
+                    "lat": 56.191008,
+                    "lon": 15.621907,
+                    "name": "Gullaberg"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 170.0,
+            "id": "740031825",
+            "name": "Kungsmarken B-huset",
+            "stops": [
+                {
+                    "id": "24152",
+                    "lat": 56.197064,
+                    "lon": 15.617416,
+                    "name": "Kungsmarken B-huset"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 170.0,
+            "id": "740031826",
+            "name": "Kungsmarken A-huset",
+            "stops": [
+                {
+                    "id": "24153",
+                    "lat": 56.197522,
+                    "lon": 15.623245,
+                    "name": "Kungsmarken A-huset"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 259.78,
+            "id": "740031829",
+            "name": "Marieberg",
+            "stops": [
+                {
+                    "id": "24156",
+                    "lat": 56.18891,
+                    "lon": 15.618052,
+                    "name": "Marieberg"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 72.93,
+            "id": "740031831",
+            "name": "Kyrkogården",
+            "stops": [
+                {
+                    "id": "24158",
+                    "lat": 56.181214,
+                    "lon": 15.601552,
+                    "name": "Kyrkogården"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 77.95,
+            "id": "740031834",
+            "name": "Ekedalsvägen",
+            "stops": [
+                {
+                    "id": "24161",
+                    "lat": 56.19346,
+                    "lon": 15.662262,
+                    "name": "Ekedalsvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 77.95,
+            "id": "740031835",
+            "name": "Ga Riksvägen",
+            "stops": [
+                {
+                    "id": "24162",
+                    "lat": 56.191432,
+                    "lon": 15.663896,
+                    "name": "Ga Riksvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 79.23,
+            "id": "740031832",
+            "name": "Hälsovägen",
+            "stops": [
+                {
+                    "id": "24159",
+                    "lat": 56.183318,
+                    "lon": 15.603183,
+                    "name": "Hälsovägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 39.48,
+            "id": "740031833",
+            "name": "Knösövägen",
+            "stops": [
+                {
+                    "id": "24160",
+                    "lat": 56.196119,
+                    "lon": 15.662896,
+                    "name": "Knösövägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 208.2,
+            "id": "740031816",
+            "name": "Sparre",
+            "stops": [
+                {
+                    "id": "24147",
+                    "lat": 56.160271,
+                    "lon": 15.591556,
+                    "name": "Sparre"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 208.2,
+            "id": "740031817",
+            "name": "Alamedan",
+            "stops": [
+                {
+                    "id": "24148",
+                    "lat": 56.158974,
+                    "lon": 15.589181,
+                    "name": "Alamedan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 162.83,
+            "id": "740031814",
+            "name": "Af Chapmangymnasiet",
+            "stops": [
+                {
+                    "id": "24145",
+                    "lat": 56.163908,
+                    "lon": 15.591536,
+                    "name": "Af Chapmangymnasiet"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 208.2,
+            "id": "740031815",
+            "name": "Drottninggatan",
+            "stops": [
+                {
+                    "id": "24146",
+                    "lat": 56.162346,
+                    "lon": 15.591544,
+                    "name": "Drottninggatan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 76.75,
+            "id": "740031823",
+            "name": "Ankaret",
+            "stops": [
+                {
+                    "id": "24150",
+                    "lat": 56.196421,
+                    "lon": 15.61402,
+                    "name": "Ankaret"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 124.97,
+            "id": "740031824",
+            "name": "Kungsmarken C-huset",
+            "stops": [
+                {
+                    "id": "24151",
+                    "lat": 56.1954,
+                    "lon": 15.615958,
+                    "name": "Kungsmarken C-huset"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 208.2,
+            "id": "740031821",
+            "name": "Varvet",
+            "stops": [
+                {
+                    "id": "24149",
+                    "lat": 56.159262,
+                    "lon": 15.579813,
+                    "name": "Varvet"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 92.95,
+            "id": "740031805",
+            "name": "Södra Hässlegården",
+            "stops": [
+                {
+                    "id": "24136",
+                    "lat": 56.219922,
+                    "lon": 15.657939,
+                    "name": "Södra Hässlegården"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 92.95,
+            "id": "740031806",
+            "name": "Silvervägen",
+            "stops": [
+                {
+                    "id": "24137",
+                    "lat": 56.218757,
+                    "lon": 15.652335,
+                    "name": "Silvervägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 92.95,
+            "id": "740031803",
+            "name": "Hässlegårdens förskola",
+            "stops": [
+                {
+                    "id": "24135",
+                    "lat": 56.221904,
+                    "lon": 15.66338,
+                    "name": "Hässlegårdens förskola"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 92.95,
+            "id": "740031809",
+            "name": "H Martinsons väg",
+            "stops": [
+                {
+                    "id": "24140",
+                    "lat": 56.210489,
+                    "lon": 15.655575,
+                    "name": "H Martinsons väg"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 92.95,
+            "id": "740031807",
+            "name": "Spandelstorpskolan",
+            "stops": [
+                {
+                    "id": "24138",
+                    "lat": 56.215319,
+                    "lon": 15.653847,
+                    "name": "Spandelstorpskolan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 92.95,
+            "id": "740031808",
+            "name": "Spandelstorp",
+            "stops": [
+                {
+                    "id": "24139",
+                    "lat": 56.212582,
+                    "lon": 15.655792,
+                    "name": "Spandelstorp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 91.78,
+            "id": "740031812",
+            "name": "Carlandravägen",
+            "stops": [
+                {
+                    "id": "24143",
+                    "lat": 56.204817,
+                    "lon": 15.659126,
+                    "name": "Carlandravägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 91.78,
+            "id": "740031813",
+            "name": "AWA vägen",
+            "stops": [
+                {
+                    "id": "24144",
+                    "lat": 56.201903,
+                    "lon": 15.655737,
+                    "name": "AWA vägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 92.95,
+            "id": "740031810",
+            "name": "G Torhamns väg",
+            "stops": [
+                {
+                    "id": "24141",
+                    "lat": 56.208036,
+                    "lon": 15.65494,
+                    "name": "G Torhamns väg"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 90.45,
+            "id": "740031811",
+            "name": "Afvelsgärdevägen",
+            "stops": [
+                {
+                    "id": "24142",
+                    "lat": 56.206982000000004,
+                    "lon": 15.659375,
+                    "name": "Afvelsgärdevägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 92.95,
+            "id": "740031801",
+            "name": "Bastasjö",
+            "stops": [
+                {
+                    "id": "24133",
+                    "lat": 56.225764,
+                    "lon": 15.661689,
+                    "name": "Bastasjö"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 92.95,
+            "id": "740031802",
+            "name": "Norra Hässlegården",
+            "stops": [
+                {
+                    "id": "24134",
+                    "lat": 56.224447,
+                    "lon": 15.664531,
+                    "name": "Norra Hässlegården"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 453.38,
+            "id": "740031800",
+            "name": "Karlskrona Amiralen",
+            "stops": [
+                {
+                    "id": "24132",
+                    "lat": 56.197291,
+                    "lon": 15.644462,
+                    "name": "Amiralen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 77.95,
+            "id": "740031869",
+            "name": "Knösö",
+            "stops": [
+                {
+                    "id": "24180",
+                    "lat": 56.189053,
+                    "lon": 15.664485,
+                    "name": "Knösö"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 167.45,
+            "id": "740031874",
+            "name": "Ekholmen",
+            "stops": [
+                {
+                    "id": "24183",
+                    "lat": 56.163829,
+                    "lon": 15.572366,
+                    "name": "Ekholmen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 24.37,
+            "id": "740031878",
+            "name": "Strandgatan",
+            "stops": [
+                {
+                    "id": "24185",
+                    "lat": 56.176711,
+                    "lon": 15.583703,
+                    "name": "Strandgatan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 49.9,
+            "id": "740031879",
+            "name": "Långö",
+            "stops": [
+                {
+                    "id": "24186",
+                    "lat": 56.179408,
+                    "lon": 15.580596,
+                    "name": "Långö"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 49.9,
+            "id": "740031877",
+            "name": "Tullparken",
+            "stops": [
+                {
+                    "id": "24184",
+                    "lat": 56.173881,
+                    "lon": 15.588212,
+                    "name": "Tullparken"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 167.45,
+            "id": "740031870",
+            "name": "Saltö",
+            "stops": [
+                {
+                    "id": "24181",
+                    "lat": 56.165868,
+                    "lon": 15.56775,
+                    "name": "Saltö"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 167.45,
+            "id": "740031871",
+            "name": "Saltö torg",
+            "stops": [
+                {
+                    "id": "24182",
+                    "lat": 56.164414,
+                    "lon": 15.568484,
+                    "name": "Saltö torg"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 77.42,
+            "id": "740031859",
+            "name": "Uranvägen Torskors",
+            "stops": [
+                {
+                    "id": "24174",
+                    "lat": 56.214581,
+                    "lon": 15.638894,
+                    "name": "Uranvägen Torskors"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 89.78,
+            "id": "740031863",
+            "name": "Gullberna station",
+            "stops": [
+                {
+                    "id": "24175",
+                    "lat": 56.191451,
+                    "lon": 15.623677,
+                    "name": "Gullberna station"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.0,
+            "id": "740031864",
+            "name": "Ringöbron",
+            "stops": [
+                {
+                    "id": "24176",
+                    "lat": 56.190918,
+                    "lon": 15.654669,
+                    "name": "Ringöbron"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 89.78,
+            "id": "740031868",
+            "name": "Hultvägen",
+            "stops": [
+                {
+                    "id": "24179",
+                    "lat": 56.192507,
+                    "lon": 15.62707,
+                    "name": "Hultvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 90.45,
+            "id": "740031865",
+            "name": "Lallerstedts gata",
+            "stops": [
+                {
+                    "id": "24177",
+                    "lat": 56.195481,
+                    "lon": 15.634708,
+                    "name": "Lallerstedts gata"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.0,
+            "id": "740031866",
+            "name": "Gullberna Park",
+            "stops": [
+                {
+                    "id": "24178",
+                    "lat": 56.191485,
+                    "lon": 15.635689,
+                    "name": "Gullberna Park"
+                }
+            ],
+            "transport_modes": []
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 51.3,
+            "id": "740031849",
+            "name": "Hästö",
+            "stops": [
+                {
+                    "id": "24172",
+                    "lat": 56.181951,
+                    "lon": 15.625155,
+                    "name": "Hästö"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 51.3,
+            "id": "740031847",
+            "name": "Hästö idrottsplats",
+            "stops": [
+                {
+                    "id": "24170",
+                    "lat": 56.180646,
+                    "lon": 15.617335,
+                    "name": "Hästö idrottsplats"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 51.3,
+            "id": "740031848",
+            "name": "Herrgårdsvägen",
+            "stops": [
+                {
+                    "id": "24171",
+                    "lat": 56.181264,
+                    "lon": 15.621696,
+                    "name": "Herrgårdsvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 167.45,
+            "id": "740031853",
+            "name": "Chapmansplan",
+            "stops": [
+                {
+                    "id": "24173",
+                    "lat": 56.161834,
+                    "lon": 15.576724,
+                    "name": "Chapmansplan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 81.95,
+            "id": "740031838",
+            "name": "Södra Ringö",
+            "stops": [
+                {
+                    "id": "24164",
+                    "lat": 56.180134,
+                    "lon": 15.655967,
+                    "name": "Södra Ringö"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 81.95,
+            "id": "740031839",
+            "name": "Ängholmen",
+            "stops": [
+                {
+                    "id": "24165",
+                    "lat": 56.176077,
+                    "lon": 15.650992,
+                    "name": "Ängholmen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 81.95,
+            "id": "740031837",
+            "name": "Ringö",
+            "stops": [
+                {
+                    "id": "24163",
+                    "lat": 56.187292,
+                    "lon": 15.656084,
+                    "name": "Ringö"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 85.28,
+            "id": "740031841",
+            "name": "Toras väg",
+            "stops": [
+                {
+                    "id": "24167",
+                    "lat": 56.170875,
+                    "lon": 15.642529,
+                    "name": "Toras väg"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 80.93,
+            "id": "740031842",
+            "name": "Roxtec Verkö",
+            "stops": [
+                {
+                    "id": "24168",
+                    "lat": 56.164237,
+                    "lon": 15.634864,
+                    "name": "Roxtec Verkö"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 85.28,
+            "id": "740031840",
+            "name": "Verkö",
+            "stops": [
+                {
+                    "id": "24166",
+                    "lat": 56.173033,
+                    "lon": 15.644565,
+                    "name": "Verkö"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 80.93,
+            "id": "740031844",
+            "name": "NKT Verkö",
+            "stops": [
+                {
+                    "id": "73222",
+                    "lat": 56.166427,
+                    "lon": 15.640745,
+                    "name": "NKT Verkö"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 24.5,
+            "id": "740031886",
+            "name": "Karlskrona Angöringen",
+            "stops": [
+                {
+                    "id": "24190",
+                    "lat": 56.207259,
+                    "lon": 15.644227,
+                    "name": "Angöringen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 84.63,
+            "id": "740031889",
+            "name": "Lösen",
+            "stops": [
+                {
+                    "id": "24193",
+                    "lat": 56.197289,
+                    "lon": 15.682014,
+                    "name": "Lösen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 390.22,
+            "id": "740031887",
+            "name": "Kvarngatan",
+            "stops": [
+                {
+                    "id": "24191",
+                    "lat": 56.172879,
+                    "lon": 15.590648,
+                    "name": "Kvarngatan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 373.52,
+            "id": "740031888",
+            "name": "Galgamarkstrappan",
+            "stops": [
+                {
+                    "id": "24192",
+                    "lat": 56.176935,
+                    "lon": 15.593749,
+                    "name": "Galgamarkstrappan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 25.53,
+            "id": "740031881",
+            "name": "Egilslunden",
+            "stops": [
+                {
+                    "id": "24188",
+                    "lat": 56.174392,
+                    "lon": 15.582864,
+                    "name": "Egilslunden"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 24.37,
+            "id": "740031882",
+            "name": "Ordensgatan",
+            "stops": [
+                {
+                    "id": "24189",
+                    "lat": 56.174827,
+                    "lon": 15.584986,
+                    "name": "Ordensgatan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 25.53,
+            "id": "740031880",
+            "name": "Lagmansgatan",
+            "stops": [
+                {
+                    "id": "24187",
+                    "lat": 56.176859,
+                    "lon": 15.581416,
+                    "name": "Lagmansgatan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 85.3,
+            "id": "740031795",
+            "name": "Östra Torp",
+            "stops": [
+                {
+                    "id": "24130",
+                    "lat": 56.194659,
+                    "lon": 15.674161,
+                    "name": "Östra Torp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 431.83,
+            "id": "740031796",
+            "name": "Annebo",
+            "stops": [
+                {
+                    "id": "24131",
+                    "lat": 56.185962,
+                    "lon": 15.605085,
+                    "name": "Annebo"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 253.7,
+            "id": "740031799",
+            "name": "Stationsvägen Slottsbacken",
+            "stops": [
+                {
+                    "id": "73221",
+                    "lat": 56.197962,
+                    "lon": 15.649276,
+                    "name": "Stationsvägen Slottsbacken"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 244.2,
+            "id": "740031790",
+            "name": "Intagsvägen",
+            "stops": [
+                {
+                    "id": "24125",
+                    "lat": 56.201421,
+                    "lon": 15.624354,
+                    "name": "Intagsvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 173.25,
+            "id": "740031793",
+            "name": "Carlemansvägen",
+            "stops": [
+                {
+                    "id": "24128",
+                    "lat": 56.196513,
+                    "lon": 15.661525,
+                    "name": "Carlemansvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 85.3,
+            "id": "740031794",
+            "name": "Kronotorp",
+            "stops": [
+                {
+                    "id": "24129",
+                    "lat": 56.196608,
+                    "lon": 15.665891,
+                    "name": "Kronotorp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 244.2,
+            "id": "740031791",
+            "name": "Backabo",
+            "stops": [
+                {
+                    "id": "24126",
+                    "lat": 56.203018,
+                    "lon": 15.629051,
+                    "name": "Backabo"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 168.12,
+            "id": "740031792",
+            "name": "Stadsträdgården",
+            "stops": [
+                {
+                    "id": "24127",
+                    "lat": 56.203801,
+                    "lon": 15.636959,
+                    "name": "Stadsträdgården"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 184.93,
+            "id": "740031784",
+            "name": "Sunnadal",
+            "stops": [
+                {
+                    "id": "24122",
+                    "lat": 56.19253,
+                    "lon": 15.612847,
+                    "name": "Sunnadal"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 244.2,
+            "id": "740031789",
+            "name": "Ekeberg",
+            "stops": [
+                {
+                    "id": "24124",
+                    "lat": 56.198612,
+                    "lon": 15.61947,
+                    "name": "Ekeberg"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 184.92,
+            "id": "740031783",
+            "name": "Lindesnäs",
+            "stops": [
+                {
+                    "id": "24121",
+                    "lat": 56.189004,
+                    "lon": 15.614926,
+                    "name": "Lindesnäs"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 170.0,
+            "id": "740031781",
+            "name": "Bergåsa centrum",
+            "stops": [
+                {
+                    "id": "24120",
+                    "lat": 56.182128,
+                    "lon": 15.600275,
+                    "name": "Bergåsa centrum"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 170.0,
+            "id": "740031779",
+            "name": "Polhemsgatan",
+            "stops": [
+                {
+                    "id": "24119",
+                    "lat": 56.176723,
+                    "lon": 15.590546,
+                    "name": "Polhemsgatan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 219.9,
+            "id": "740031777",
+            "name": "Landsvägsgatan",
+            "stops": [
+                {
+                    "id": "24117",
+                    "lat": 56.172004,
+                    "lon": 15.588238,
+                    "name": "Landsvägsgatan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 170.0,
+            "id": "740031778",
+            "name": "Tullskolan",
+            "stops": [
+                {
+                    "id": "24118",
+                    "lat": 56.174439,
+                    "lon": 15.58903,
+                    "name": "Tullskolan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 1.93,
+            "id": "740021794",
+            "name": "Herrgårdsviken (Tjurkö) brygga",
+            "stops": [
+                {
+                    "id": "68901",
+                    "lat": 56.131399,
+                    "lon": 15.620632,
+                    "name": "Herrgårdsviken"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.0,
+            "id": "740021795",
+            "name": "Sanda",
+            "stops": [
+                {
+                    "id": "24504",
+                    "lat": 56.119792,
+                    "lon": 15.650817,
+                    "name": "Sanda"
+                }
+            ],
+            "transport_modes": []
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 12.47,
+            "id": "740011623",
+            "name": "Tjurkö kyrka",
+            "stops": [
+                {
+                    "id": "24303",
+                    "lat": 56.11669,
+                    "lon": 15.615832,
+                    "name": "Tjurkö kyrka"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 77.42,
+            "id": "740011646",
+            "name": "Torskors",
+            "stops": [
+                {
+                    "id": "24327",
+                    "lat": 56.210793,
+                    "lon": 15.633592,
+                    "name": "Torskors"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 1.33,
+            "id": "740031996",
+            "name": "Augerums kyrka",
+            "stops": [
+                {
+                    "id": "24311",
+                    "lat": 56.217195,
+                    "lon": 15.676921,
+                    "name": "Augerums kyrka"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 1.33,
+            "id": "740031994",
+            "name": "Råbacken",
+            "stops": [
+                {
+                    "id": "24309",
+                    "lat": 56.209286,
+                    "lon": 15.663105,
+                    "name": "Råbacken"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 1.33,
+            "id": "740031999",
+            "name": "Krokebro",
+            "stops": [
+                {
+                    "id": "24315",
+                    "lat": 56.24823,
+                    "lon": 15.712643,
+                    "name": "Krokebro"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 1.33,
+            "id": "740031997",
+            "name": "Mariefors",
+            "stops": [
+                {
+                    "id": "24312",
+                    "lat": 56.22123,
+                    "lon": 15.67889,
+                    "name": "Mariefors"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 1.33,
+            "id": "740031998",
+            "name": "Mölleåker",
+            "stops": [
+                {
+                    "id": "24313",
+                    "lat": 56.227794,
+                    "lon": 15.687332,
+                    "name": "Mölleåker"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 28.33,
+            "id": "740031979",
+            "name": "Killevägen",
+            "stops": [
+                {
+                    "id": "24291",
+                    "lat": 56.102754,
+                    "lon": 15.690482,
+                    "name": "Killevägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 17.38,
+            "id": "740031984",
+            "name": "Sanda",
+            "stops": [
+                {
+                    "id": "24298",
+                    "lat": 56.115872,
+                    "lon": 15.654369,
+                    "name": "Sanda"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 12.47,
+            "id": "740031985",
+            "name": "Smedvägen",
+            "stops": [
+                {
+                    "id": "24299",
+                    "lat": 56.111691,
+                    "lon": 15.650351,
+                    "name": "Smedvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 17.88,
+            "id": "740031982",
+            "name": "Sturköhallen",
+            "stops": [
+                {
+                    "id": "24296",
+                    "lat": 56.114483,
+                    "lon": 15.672636,
+                    "name": "Sturköhallen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 17.88,
+            "id": "740031983",
+            "name": "Tockatorp",
+            "stops": [
+                {
+                    "id": "24297",
+                    "lat": 56.114392,
+                    "lon": 15.663747,
+                    "name": "Tockatorp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 12.47,
+            "id": "740031988",
+            "name": "Lejonbacken",
+            "stops": [
+                {
+                    "id": "24302",
+                    "lat": 56.112229,
+                    "lon": 15.612157,
+                    "name": "Lejonbacken"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 12.47,
+            "id": "740031989",
+            "name": "Sundetvägen",
+            "stops": [
+                {
+                    "id": "24304",
+                    "lat": 56.119194,
+                    "lon": 15.620932,
+                    "name": "Sundetvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 12.47,
+            "id": "740031986",
+            "name": "Kungastenen",
+            "stops": [
+                {
+                    "id": "24300",
+                    "lat": 56.10819,
+                    "lon": 15.644676,
+                    "name": "Kungastenen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 12.47,
+            "id": "740031987",
+            "name": "Djupasund",
+            "stops": [
+                {
+                    "id": "24301",
+                    "lat": 56.109248,
+                    "lon": 15.624548,
+                    "name": "Djupasund"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 28.33,
+            "id": "740031980",
+            "name": "Strannakullen",
+            "stops": [
+                {
+                    "id": "24292",
+                    "lat": 56.099415,
+                    "lon": 15.692854,
+                    "name": "Strannakullen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 28.33,
+            "id": "740031981",
+            "name": "Skallatorp",
+            "stops": [
+                {
+                    "id": "24293",
+                    "lat": 56.094638,
+                    "lon": 15.694331,
+                    "name": "Skallatorp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 18.37,
+            "id": "740031973",
+            "name": "Skällenäs",
+            "stops": [
+                {
+                    "id": "24284",
+                    "lat": 56.110618,
+                    "lon": 15.71886,
+                    "name": "Skällenäs"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 18.37,
+            "id": "740031974",
+            "name": "Dragsvik",
+            "stops": [
+                {
+                    "id": "24285",
+                    "lat": 56.110711,
+                    "lon": 15.711402,
+                    "name": "Dragsvik"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 18.37,
+            "id": "740031971",
+            "name": "Västernäs",
+            "stops": [
+                {
+                    "id": "24281",
+                    "lat": 56.131296,
+                    "lon": 15.739109,
+                    "name": "Västernäs"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 18.37,
+            "id": "740031972",
+            "name": "Skällö",
+            "stops": [
+                {
+                    "id": "24283",
+                    "lat": 56.116094,
+                    "lon": 15.729651,
+                    "name": "Skällö"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 17.88,
+            "id": "740031977",
+            "name": "Hålan",
+            "stops": [
+                {
+                    "id": "24288",
+                    "lat": 56.112907,
+                    "lon": 15.676869,
+                    "name": "Hålan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 28.83,
+            "id": "740031978",
+            "name": "Sturkö skola",
+            "stops": [
+                {
+                    "id": "24289",
+                    "lat": 56.112076,
+                    "lon": 15.680762,
+                    "name": "Sturkö skola"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 18.37,
+            "id": "740031975",
+            "name": "Frändatorp",
+            "stops": [
+                {
+                    "id": "24286",
+                    "lat": 56.11232,
+                    "lon": 15.701979,
+                    "name": "Frändatorp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 18.37,
+            "id": "740031976",
+            "name": "Bredavik",
+            "stops": [
+                {
+                    "id": "24287",
+                    "lat": 56.114017,
+                    "lon": 15.69114,
+                    "name": "Bredavik"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 17.38,
+            "id": "740031966",
+            "name": "Torstäva",
+            "stops": [
+                {
+                    "id": "24275",
+                    "lat": 56.172021,
+                    "lon": 15.731906,
+                    "name": "Torstäva"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 18.37,
+            "id": "740031967",
+            "name": "Trummenäsvägen",
+            "stops": [
+                {
+                    "id": "24276",
+                    "lat": 56.170364,
+                    "lon": 15.739974,
+                    "name": "Trummenäsvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 17.38,
+            "id": "740031964",
+            "name": "Torstäva vsk",
+            "stops": [
+                {
+                    "id": "24273",
+                    "lat": 56.183706,
+                    "lon": 15.719483,
+                    "name": "Torstäva vsk"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 17.38,
+            "id": "740031965",
+            "name": "Torsnäsvägen",
+            "stops": [
+                {
+                    "id": "24274",
+                    "lat": 56.175051,
+                    "lon": 15.72253,
+                    "name": "Torsnäsvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 51.3,
+            "id": "740032976",
+            "name": "Wämöparken",
+            "stops": [
+                {
+                    "id": "24510",
+                    "lat": 56.178717,
+                    "lon": 15.612353,
+                    "name": "Wämöparken"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.3,
+            "id": "740032431",
+            "name": "Slätthammar",
+            "stops": [
+                {
+                    "id": "24721",
+                    "lat": 56.151911,
+                    "lon": 15.448557,
+                    "name": "Slätthammar"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.3,
+            "id": "740032430",
+            "name": "Hajvar",
+            "stops": [
+                {
+                    "id": "24720",
+                    "lat": 56.140101,
+                    "lon": 15.455101,
+                    "name": "Hajvar"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 77.42,
+            "id": "740032010",
+            "name": "Bubbetorp",
+            "stops": [
+                {
+                    "id": "24329",
+                    "lat": 56.229412,
+                    "lon": 15.628559,
+                    "name": "Bubbetorp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 129.27,
+            "id": "740032087",
+            "name": "Silleboda",
+            "stops": [
+                {
+                    "id": "24422",
+                    "lat": 56.209011,
+                    "lon": 15.601774,
+                    "name": "Silleboda"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 26.2,
+            "id": "740032088",
+            "name": "Bjärby",
+            "stops": [
+                {
+                    "id": "24424",
+                    "lat": 56.202325,
+                    "lon": 15.511149,
+                    "name": "Bjärby"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 26.2,
+            "id": "740032089",
+            "name": "Skillinge",
+            "stops": [
+                {
+                    "id": "24425",
+                    "lat": 56.200661,
+                    "lon": 15.499078,
+                    "name": "Skillinge"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 78.68,
+            "id": "740032074",
+            "name": "Skärfva by",
+            "stops": [
+                {
+                    "id": "24405",
+                    "lat": 56.21263,
+                    "lon": 15.56198,
+                    "name": "Skärfva by"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 26.2,
+            "id": "740032090",
+            "name": "Bjärbylund",
+            "stops": [
+                {
+                    "id": "24426",
+                    "lat": 56.198027,
+                    "lon": 15.480444,
+                    "name": "Bjärbylund"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 108.68,
+            "id": "740032091",
+            "name": "Skönstavik",
+            "stops": [
+                {
+                    "id": "24427",
+                    "lat": 56.200792,
+                    "lon": 15.606828,
+                    "name": "Skönstavik"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 108.68,
+            "id": "740032092",
+            "name": "Karlsgärde",
+            "stops": [
+                {
+                    "id": "24428",
+                    "lat": 56.205135,
+                    "lon": 15.604034,
+                    "name": "Karlsgärde"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 2.65,
+            "id": "740032097",
+            "name": "Åvägen",
+            "stops": [
+                {
+                    "id": "24433",
+                    "lat": 56.203259,
+                    "lon": 15.534714,
+                    "name": "Åvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 51.4,
+            "id": "740032098",
+            "name": "Benabacken",
+            "stops": [
+                {
+                    "id": "24435",
+                    "lat": 56.201143,
+                    "lon": 15.531909,
+                    "name": "Benabacken"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 78.68,
+            "id": "740032095",
+            "name": "Såglyckan",
+            "stops": [
+                {
+                    "id": "24429",
+                    "lat": 56.211054,
+                    "lon": 15.551258,
+                    "name": "Såglyckan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 80.4,
+            "id": "740032096",
+            "name": "Bokskogsvägen",
+            "stops": [
+                {
+                    "id": "24430",
+                    "lat": 56.210513,
+                    "lon": 15.541302,
+                    "name": "Bokskogsvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 51.4,
+            "id": "740032099",
+            "name": "Roslundavägen",
+            "stops": [
+                {
+                    "id": "24436",
+                    "lat": 56.197182,
+                    "lon": 15.532066,
+                    "name": "Roslundavägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.0,
+            "id": "740032125",
+            "name": "Karlskrona Aspöfärjan",
+            "stops": [
+                {
+                    "id": "24460",
+                    "lat": 56.162891,
+                    "lon": 15.595996,
+                    "name": "Aspöfärjan"
+                }
+            ],
+            "transport_modes": []
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.67,
+            "id": "740032116",
+            "name": "Tångenvägen",
+            "stops": [
+                {
+                    "id": "24452",
+                    "lat": 56.111611,
+                    "lon": 15.457369,
+                    "name": "Tångenvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 39.08,
+            "id": "740032115",
+            "name": "Nättrabyån",
+            "stops": [
+                {
+                    "id": "24449",
+                    "lat": 56.208581,
+                    "lon": 15.532694,
+                    "name": "Nättrabyån"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 2.0,
+            "id": "740032110",
+            "name": "Boråkra",
+            "stops": [
+                {
+                    "id": "24448",
+                    "lat": 56.223589,
+                    "lon": 15.5824,
+                    "name": "Boråkra"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 12.73,
+            "id": "740032105",
+            "name": "Grönadal",
+            "stops": [
+                {
+                    "id": "24441",
+                    "lat": 56.186596,
+                    "lon": 15.509579,
+                    "name": "Grönadal"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 12.73,
+            "id": "740032106",
+            "name": "Skillingenäs",
+            "stops": [
+                {
+                    "id": "24442",
+                    "lat": 56.184673,
+                    "lon": 15.505326,
+                    "name": "Skillingenäs"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 12.73,
+            "id": "740032104",
+            "name": "Dalamad",
+            "stops": [
+                {
+                    "id": "24440",
+                    "lat": 56.188371,
+                    "lon": 15.515766,
+                    "name": "Dalamad"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 2.0,
+            "id": "740032109",
+            "name": "Allévägen",
+            "stops": [
+                {
+                    "id": "24446",
+                    "lat": 56.216413,
+                    "lon": 15.597754,
+                    "name": "Allévägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 13.47,
+            "id": "740032107",
+            "name": "Färmanstorpsv",
+            "stops": [
+                {
+                    "id": "24443",
+                    "lat": 56.185135,
+                    "lon": 15.499782,
+                    "name": "Färmanstorpsv"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 131.95,
+            "id": "740032108",
+            "name": "Rosenholm",
+            "stops": [
+                {
+                    "id": "24444",
+                    "lat": 56.212755,
+                    "lon": 15.601416,
+                    "name": "Rosenholm"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 12.73,
+            "id": "740032101",
+            "name": "Ängsvägen",
+            "stops": [
+                {
+                    "id": "24438",
+                    "lat": 56.190299,
+                    "lon": 15.530489,
+                    "name": "Ängsvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 12.73,
+            "id": "740032100",
+            "name": "Granitvägen",
+            "stops": [
+                {
+                    "id": "24437",
+                    "lat": 56.193488,
+                    "lon": 15.534541,
+                    "name": "Granitvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 105.73,
+            "id": "740022583",
+            "name": "Sturkövägen vägskäl E22",
+            "stops": [
+                {
+                    "id": "24196",
+                    "lat": 56.184353,
+                    "lon": 15.71982,
+                    "name": "Sturkövägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 77.42,
+            "id": "740032009",
+            "name": "Berget",
+            "stops": [
+                {
+                    "id": "24326",
+                    "lat": 56.207585,
+                    "lon": 15.632833,
+                    "name": "Berget"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 25.28,
+            "id": "740032287",
+            "name": "Förkärla kyrka",
+            "stops": [
+                {
+                    "id": "24598",
+                    "lat": 56.197284,
+                    "lon": 15.433652,
+                    "name": "Förkärla kyrka"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.3,
+            "id": "740032268",
+            "name": "Golfbanan",
+            "stops": [
+                {
+                    "id": "24579",
+                    "lat": 56.15708,
+                    "lon": 15.450311,
+                    "name": "Golfbanan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.92,
+            "id": "740032262",
+            "name": "Norra Esketorp",
+            "stops": [
+                {
+                    "id": "24573",
+                    "lat": 56.19269,
+                    "lon": 15.469343,
+                    "name": "Norra Esketorp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 3.38,
+            "id": "740032263",
+            "name": "Tromtesunda",
+            "stops": [
+                {
+                    "id": "24574",
+                    "lat": 56.179808,
+                    "lon": 15.465027,
+                    "name": "Tromtesunda"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 26.2,
+            "id": "740032261",
+            "name": "Hjortahammars vsk",
+            "stops": [
+                {
+                    "id": "24572",
+                    "lat": 56.197541,
+                    "lon": 15.469912,
+                    "name": "Hjortahammars vsk"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.3,
+            "id": "740032266",
+            "name": "Gravfältet",
+            "stops": [
+                {
+                    "id": "24577",
+                    "lat": 56.169922,
+                    "lon": 15.462459,
+                    "name": "Gravfältet"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.3,
+            "id": "740032267",
+            "name": "Almöbron",
+            "stops": [
+                {
+                    "id": "24578",
+                    "lat": 56.16634,
+                    "lon": 15.459819,
+                    "name": "Almöbron"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.92,
+            "id": "740032264",
+            "name": "Esketorp",
+            "stops": [
+                {
+                    "id": "24575",
+                    "lat": 56.187196,
+                    "lon": 15.466975,
+                    "name": "Esketorp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.3,
+            "id": "740032265",
+            "name": "Gnistan",
+            "stops": [
+                {
+                    "id": "24576",
+                    "lat": 56.177722,
+                    "lon": 15.464048,
+                    "name": "Gnistan"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 80.93,
+            "id": "740022976",
+            "name": "Verkö färjeterminalen",
+            "stops": [
+                {
+                    "id": "24474",
+                    "lat": 56.16477,
+                    "lon": 15.630837,
+                    "name": "Verkö färjeterminalen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 182.12,
+            "id": "740032169",
+            "name": "Järavägen",
+            "stops": [
+                {
+                    "id": "24482",
+                    "lat": 56.201812,
+                    "lon": 15.64077,
+                    "name": "Järavägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 78.68,
+            "id": "740032149",
+            "name": "Skärva",
+            "stops": [
+                {
+                    "id": "24476",
+                    "lat": 56.211423,
+                    "lon": 15.569772,
+                    "name": "Skärva"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 18.37,
+            "id": "740032147",
+            "name": "Brofästet",
+            "stops": [
+                {
+                    "id": "24475",
+                    "lat": 56.136695,
+                    "lon": 15.742139,
+                    "name": "Brofästet"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 2.0,
+            "id": "740032145",
+            "name": "Allatorp norra",
+            "stops": [
+                {
+                    "id": "24472",
+                    "lat": 56.229239,
+                    "lon": 15.583028,
+                    "name": "Allatorp norra"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 1.33,
+            "id": "740032146",
+            "name": "Bränteknuva by",
+            "stops": [
+                {
+                    "id": "24473",
+                    "lat": 56.245754,
+                    "lon": 15.541236,
+                    "name": "Bränteknuva by"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.0,
+            "id": "740032144",
+            "name": "Wämöskolan Ekorrvägen",
+            "stops": [
+                {
+                    "id": "72717",
+                    "lat": 56.177764,
+                    "lon": 15.596639,
+                    "name": "Wämöskolan Ekorrvägen"
+                }
+            ],
+            "transport_modes": []
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 1.33,
+            "id": "740032137",
+            "name": "Harstorp",
+            "stops": [
+                {
+                    "id": "24471",
+                    "lat": 56.241478,
+                    "lon": 15.562829,
+                    "name": "Harstorp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 1.33,
+            "id": "740032132",
+            "name": "Bränteknuva vsk",
+            "stops": [
+                {
+                    "id": "24466",
+                    "lat": 56.243859,
+                    "lon": 15.558846,
+                    "name": "Bränteknuva vsk"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 1.33,
+            "id": "740032133",
+            "name": "Målatorps vsk",
+            "stops": [
+                {
+                    "id": "24467",
+                    "lat": 56.2492,
+                    "lon": 15.528049,
+                    "name": "Målatorps vsk"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.0,
+            "id": "740071726",
+            "name": "Aspö Djupvik",
+            "stops": [
+                {
+                    "id": "73329",
+                    "lat": 56.119185,
+                    "lon": 15.521866,
+                    "name": "Aspö Djupvik"
+                }
+            ],
+            "transport_modes": []
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 84.55,
+            "id": "740032192",
+            "name": "NKT Arena Karlskrona",
+            "stops": [
+                {
+                    "id": "24507",
+                    "lat": 56.217178,
+                    "lon": 15.60381,
+                    "name": "NKT Arena Karlskrona"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 167.45,
+            "id": "740032193",
+            "name": "Lyckeby Slottsbacken",
+            "stops": [
+                {
+                    "id": "24508",
+                    "lat": 56.197494,
+                    "lon": 15.649053,
+                    "name": "Lyckeby Slottsbacken"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 170.0,
+            "id": "740032188",
+            "name": "Karlskrona campus Gräsvik",
+            "stops": [
+                {
+                    "id": "24505",
+                    "lat": 56.180634,
+                    "lon": 15.592908,
+                    "name": "Campus Gräsvik"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 12.47,
+            "id": "740023365",
+            "name": "Tjurkö Stora Lycke",
+            "stops": [
+                {
+                    "id": "24305",
+                    "lat": 56.123359,
+                    "lon": 15.625623,
+                    "name": "St Lycke"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 14.17,
+            "id": "740023364",
+            "name": "Sturkö kyrka",
+            "stops": [
+                {
+                    "id": "24295",
+                    "lat": 56.087912,
+                    "lon": 15.695009,
+                    "name": "Sturkö kyrka"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 590.97,
+            "id": "740023372",
+            "name": "Karlskrona centrum",
+            "stops": [
+                {
+                    "id": "24481",
+                    "lat": 56.163145,
+                    "lon": 15.586325,
+                    "name": "Karlskrona centrum"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.67,
+            "id": "740023345",
+            "name": "Hasslö",
+            "stops": [
+                {
+                    "id": "24457",
+                    "lat": 56.115234,
+                    "lon": 15.475293,
+                    "name": "Hasslö"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 28.33,
+            "id": "740023356",
+            "name": "Ryd",
+            "stops": [
+                {
+                    "id": "24290",
+                    "lat": 56.106128,
+                    "lon": 15.687579,
+                    "name": "Ryd"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 53.77,
+            "id": "740023351",
+            "name": "Nättraby E22",
+            "stops": [
+                {
+                    "id": "24423",
+                    "lat": 56.207261,
+                    "lon": 15.528804,
+                    "name": "Nättraby E22"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.0,
+            "id": "740023352",
+            "name": "Nättraby",
+            "stops": [
+                {
+                    "id": "24501",
+                    "lat": 56.200551,
+                    "lon": 15.536553,
+                    "name": "Nättraby"
+                }
+            ],
+            "transport_modes": []
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.0,
+            "id": "740023402",
+            "name": "Senoren",
+            "stops": [
+                {
+                    "id": "24488",
+                    "lat": 56.137539,
+                    "lon": 15.742186,
+                    "name": "Senoren"
+                }
+            ],
+            "transport_modes": []
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 595.67,
+            "id": "740037242",
+            "name": "Lokstallarna",
+            "stops": [
+                {
+                    "id": "24511",
+                    "lat": 56.1687,
+                    "lon": 15.584072,
+                    "name": "Lokstallarna"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 5.33,
+            "id": "740076466",
+            "name": "Trummenäs brygga",
+            "stops": [
+                {
+                    "id": "62489",
+                    "lat": 56.160224,
+                    "lon": 15.724541,
+                    "name": "Trummenäs brygga"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 3.33,
+            "id": "740017987",
+            "name": "Wrängö brygga",
+            "stops": [
+                {
+                    "id": "74168",
+                    "lat": 56.19446,
+                    "lon": 15.539915,
+                    "name": "Wrängö"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 18.6,
+            "id": "740017989",
+            "name": "Dragsö brygga",
+            "stops": [
+                {
+                    "id": "68911",
+                    "lat": 56.173328,
+                    "lon": 15.570731,
+                    "name": "Dragsö brygga"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 3.33,
+            "id": "740017988",
+            "name": "Sjuhalla brygga",
+            "stops": [
+                {
+                    "id": "74167",
+                    "lat": 56.185666,
+                    "lon": 15.560493,
+                    "name": "Sjuhalla"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 1.67,
+            "id": "740017994",
+            "name": "Finskan (Tjurkö) brygga",
+            "stops": [
+                {
+                    "id": "74165",
+                    "lat": 56.105797,
+                    "lon": 15.594929,
+                    "name": "Finskan"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 3.33,
+            "id": "740017996",
+            "name": "Drottningskär Kastellet brygga",
+            "stops": [
+                {
+                    "id": "74166",
+                    "lat": 56.11098,
+                    "lon": 15.565486,
+                    "name": "Kastellet"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.0,
+            "id": "740017995",
+            "name": "Kungsholmen brygga",
+            "stops": [
+                {
+                    "id": "68904",
+                    "lat": 56.108187,
+                    "lon": 15.590303,
+                    "name": "Kungsholmen"
+                }
+            ],
+            "transport_modes": []
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 10.0,
+            "id": "740017997",
+            "name": "Karlskrona Marinmuseum",
+            "stops": [
+                {
+                    "id": "74229",
+                    "lat": 56.161119,
+                    "lon": 15.598761,
+                    "name": "Marinmuseum"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 15.27,
+            "id": "740017990",
+            "name": "Brändaholm brygga",
+            "stops": [
+                {
+                    "id": "68906",
+                    "lat": 56.171012,
+                    "lon": 15.57134,
+                    "name": "Brändaholm"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 3.33,
+            "id": "740017991",
+            "name": "Nättraby Åslätten brygga",
+            "stops": [
+                {
+                    "id": "74169",
+                    "lat": 56.193517,
+                    "lon": 15.539824,
+                    "name": "Åslätten"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 10.73,
+            "id": "740072529",
+            "name": "Hasslö Horn",
+            "stops": [
+                {
+                    "id": "24513",
+                    "lat": 56.118314,
+                    "lon": 15.488674,
+                    "name": "Hasslö Horns brygga"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 90.45,
+            "id": "740072447",
+            "name": "Gullberna",
+            "stops": [
+                {
+                    "id": "24484",
+                    "lat": 56.193286,
+                    "lon": 15.631818,
+                    "name": "Gullberna"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 18.7,
+            "id": "740072446",
+            "name": "Bredavik brygga",
+            "stops": [
+                {
+                    "id": "24512",
+                    "lat": 56.116131,
+                    "lon": 15.686053,
+                    "name": "Bredavik brygga"
+                }
+            ],
+            "transport_modes": [
+                "BOAT",
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 18.37,
+            "id": "740000469",
+            "name": "Sturkö Kvarnen",
+            "stops": [
+                {
+                    "id": "469",
+                    "lat": 56.112957,
+                    "lon": 15.681579,
+                    "name": "Kvarnen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.3,
+            "id": "740024366",
+            "name": "Hasslöbron",
+            "stops": [
+                {
+                    "id": "24580",
+                    "lat": 56.131491,
+                    "lon": 15.459312,
+                    "name": "Hasslöbron"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 111.1,
+            "id": "740024365",
+            "name": "Sjukhuset huvudentrén",
+            "stops": [
+                {
+                    "id": "24157",
+                    "lat": 56.182226,
+                    "lon": 15.605169,
+                    "name": "Sjukhuset huvudentrén"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 2.0,
+            "id": "740010009",
+            "name": "Allatorps gård",
+            "stops": [
+                {
+                    "id": "24445",
+                    "lat": 56.220595,
+                    "lon": 15.59059,
+                    "name": "Allatorps gård"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 3.38,
+            "id": "740073661",
+            "name": "Tromtesunda by",
+            "stops": [
+                {
+                    "id": "24662",
+                    "lat": 56.175868,
+                    "lon": 15.479408,
+                    "name": "Tromtesunda by"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 54.42,
+            "id": "740000564",
+            "name": "Nättraby hörnet",
+            "stops": [
+                {
+                    "id": "564",
+                    "lat": 56.206879,
+                    "lon": 15.530724,
+                    "name": "Nättraby hörnet"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 265.03,
+            "id": "740000663",
+            "name": "Lyckeby centrum",
+            "stops": [
+                {
+                    "id": "663",
+                    "lat": 56.198687,
+                    "lon": 15.654735,
+                    "name": "Lyckeby centrum"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.67,
+            "id": "740000017",
+            "name": "Hasslö Fabian Månsons väg",
+            "stops": [
+                {
+                    "id": "17",
+                    "lat": 56.112499,
+                    "lon": 15.470076,
+                    "name": "Fabian Månssons väg"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 677.17,
+            "id": "740000230",
+            "name": "Karlskrona Centralstation",
+            "stops": [
+                {
+                    "id": "230",
+                    "lat": 56.166709,
+                    "lon": 15.585387,
+                    "name": "Karlskrona Centralstation"
+                },
+                {
+                    "id": "73624",
+                    "lat": 56.167057,
+                    "lon": 15.585251,
+                    "name": "Karlskrona central"
+                }
+            ],
+            "transport_modes": [
+                "BOAT",
+                "BUS",
+                "TRAIN"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 28.33,
+            "id": "740004348",
+            "name": "Uttorp",
+            "stops": [
+                {
+                    "id": "24294",
+                    "lat": 56.091738,
+                    "lon": 15.69511,
+                    "name": "Uttorp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 527.5,
+            "id": "740020510",
+            "name": "Karlskrona Kungsplan",
+            "stops": [
+                {
+                    "id": "73602",
+                    "lat": 56.165515,
+                    "lon": 15.586807,
+                    "name": "Kungsplan Hoglands Park"
+                },
+                {
+                    "id": "24116",
+                    "lat": 56.165202,
+                    "lon": 15.586844,
+                    "name": "Kungsplan"
+                }
+            ],
+            "transport_modes": [
+                "BUS",
+                "TRAIN"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 18.6,
+            "id": "740020700",
+            "name": "Karlskrona Fisktorget",
+            "stops": [
+                {
+                    "id": "24486",
+                    "lat": 56.162333,
+                    "lon": 15.579312,
+                    "name": "Fisktorget"
+                }
+            ],
+            "transport_modes": [
+                "BOAT"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 3.38,
+            "id": "740044719",
+            "name": "Färmanstorp",
+            "stops": [
+                {
+                    "id": "24586",
+                    "lat": 56.176658,
+                    "lon": 15.489771,
+                    "name": "Färmanstorp"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 38.3,
+            "id": "740020699",
+            "name": "Karlskrona Handelshamnen",
+            "stops": [
+                {
+                    "id": "24503",
+                    "lat": 56.163432,
+                    "lon": 15.596737,
+                    "name": "Handelshamnen"
+                }
+            ],
+            "transport_modes": [
+                "BOAT",
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 1.33,
+            "id": "740010999",
+            "name": "Lyckeåborg",
+            "stops": [
+                {
+                    "id": "24314",
+                    "lat": 56.22935,
+                    "lon": 15.689182,
+                    "name": "Lyckeåborg"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 148.1,
+            "id": "740024915",
+            "name": "Karlskrona Mariedal Motellet",
+            "stops": [
+                {
+                    "id": "24123",
+                    "lat": 56.196749,
+                    "lon": 15.61136,
+                    "name": "Motellet"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 47.3,
+            "id": "740024966",
+            "name": "Nättraby centrum",
+            "stops": [
+                {
+                    "id": "24477",
+                    "lat": 56.199896,
+                    "lon": 15.536494,
+                    "name": "Nättraby centrum"
+                }
+            ],
+            "transport_modes": [
+                "BOAT",
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.67,
+            "id": "740024855",
+            "name": "Hasslö Näsvägen",
+            "stops": [
+                {
+                    "id": "24450",
+                    "lat": 56.117884,
+                    "lon": 15.458888,
+                    "name": "Näsvägen"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.67,
+            "id": "740010555",
+            "name": "Hallarna",
+            "stops": [
+                {
+                    "id": "24451",
+                    "lat": 56.113758,
+                    "lon": 15.454489,
+                    "name": "Hallarna"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 4.67,
+            "id": "740010554",
+            "name": "Hasslö Horn kyrka",
+            "stops": [
+                {
+                    "id": "24459",
+                    "lat": 56.11843,
+                    "lon": 15.481326,
+                    "name": "Horn"
+                }
+            ],
+            "transport_modes": [
+                "BUS"
+            ]
+        },
+        {
+            "area_type": "RIKSHALLPLATS",
+            "average_daily_stop_times": 0.0,
+            "id": "740010414",
+            "name": "Garpahamnen brygga",
+            "stops": [
+                {
+                    "id": "73223",
+                    "lat": 56.10237,
+                    "lon": 15.47415,
+                    "name": "Garpahamnen"
+                },
+                {
+                    "id": "73330",
+                    "lat": 56.101938,
+                    "lon": 15.477142,
+                    "name": "Garpahamnen brygga"
+                }
+            ],
+            "transport_modes": []
+        }
+    ],
+    "timestamp": "2026-11-15T22:05:05"
+}
