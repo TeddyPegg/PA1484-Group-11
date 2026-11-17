@@ -4,7 +4,7 @@
 #include <cstdlib>
 #include <sstream>
 #include <curl/curl.h>
-#include "../../secreats.h"
+#include "../../secrets.h"
 
 namespace {
 

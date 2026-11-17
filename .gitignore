@@ -12,5 +12,6 @@ Wrist*
 Butt*
 *loacl
 /project/secrets.h
-secreats.h
+secrets.h
 allstops.json
+/include/nlohmann/json.hpp
