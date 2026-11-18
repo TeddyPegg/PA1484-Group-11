@@ -21,10 +21,10 @@ enum TransportType {
 
 // Departuree entry
 struct DepartureEntry {
-    const char* origin;
-    const char* destination;
-    const char* line;
-    const char* time;
+    String origin;
+    String destination;
+    String line;
+    String time;
     DepartureStatus status;
     TransportType transport_type;
 };
@@ -34,6 +34,12 @@ void timetable_create_screen(lv_obj_t* parent);
 
 // sets the active filter based on whats chosen
 void timetable_set_filter(const char* stop_name, TransportType transport_type);
+
+// fetches fresh departures from Trafiklab for the active stop
+bool timetable_fetch_live_data(void);
+
+// returns readable live data status for Settings screen
+const char* timetable_get_live_status(void);
 
 // update view, called on filter changes
 void timetable_refresh_view(void);
