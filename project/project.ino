@@ -15,6 +15,9 @@
 // Custom font supporting Swedish characters (Å,Ä,Ö)
 LV_FONT_DECLARE(font_montserrat_16);
 
+unsigned long last_auto_refresh = 0;
+const unsigned long AUTO_REFRESH_INTERVAL_MS = 60000; // 60 seconds
+
 LilyGo_Class amoled;
 
 // Function: Connects to WIFI
@@ -66,11 +69,21 @@ void setup()
   connect_wifi(); // connects wifi
   
   ui_init(); // intializes the entire UI
+
+  last_auto_refresh = millis(); // start countdown
 }
 
 // Must have function: Loop runs continously on device after setup
 void loop()
 {
   lv_timer_handler();
+
+  if (millis() - last_auto_refresh >= AUTO_REFRESH_INTERVAL_MS) {
+    last_auto_refresh = millis();
+    Serial.println("US4.1: Auto-refreshing departures (60s)...");
+    timetable_fetch_live_data();
+    ui_update_status_labels();
+  }
+
   delay(5);
 }

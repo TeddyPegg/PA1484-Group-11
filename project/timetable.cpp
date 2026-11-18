@@ -1,28 +1,53 @@
 #include "timetable.h"
+#include "stopInfo.h"
 #include <vector>
 #include <string.h>
 #include <Arduino.h>
+#include <WiFi.h>
 
 LV_FONT_DECLARE(font_montserrat_16);
 
-// Mock data across 5 Karlskrona stations
-static const DepartureEntry DEMO_DEPARTURES[] = {
-    {"Campus Gräsvik",   "Karlskrona C",     "1", "12:15", STATUS_ON_TIME,   TRANSPORT_BUS},
-    {"Campus Gräsvik",   "Lyckeby Centrum",  "2", "12:22", STATUS_DELAYED,   TRANSPORT_BUS},
-    {"Karlskrona C",     "Bergåsa Station",  "5", "12:30", STATUS_ON_TIME,   TRANSPORT_BUS},
-    {"Kungsplan",        "Campus Gräsvik",   "1", "12:35", STATUS_CANCELLED, TRANSPORT_BUS},
-    {"Bergåsa Station",  "Karlskrona C",     "7", "12:42", STATUS_DELAYED,   TRANSPORT_TRAIN},
-    {"Lyckeby Centrum",  "Kungsplan",        "2", "12:50", STATUS_ON_TIME,   TRANSPORT_BUS},
-    {"Campus Gräsvik",   "Bergåsa Station",  "3", "12:58", STATUS_ON_TIME,   TRANSPORT_FERRY},
-    {"Karlskrona C",     "Campus Gräsvik",   "1", "13:05", STATUS_ON_TIME,   TRANSPORT_BUS},
-    {"Bergåsa Station",  "Lyckeby Centrum",  "2", "13:14", STATUS_DELAYED,   TRANSPORT_BUS}
+struct StopMapping {
+    const char* name;
+    const char* stop_id;
 };
 
-static const size_t DEMO_COUNT = sizeof(DEMO_DEPARTURES) / sizeof(DEMO_DEPARTURES[0]);
+// 7 Karlskrona stops covering bus, train, and ferry
+static const StopMapping KARLSKRONA_STOPS[] = {
+    {"Campus Gräsvik",    "740032188"},
+    {"Karlskrona C",      "740000230"},
+    {"Kungsplan",         "740020510"},
+    {"Bergåsa Station",   "740001537"},
+    {"Lyckeby Centrum",   "740000663"},
+    {"Handelshamnen",     "740020699"},
+    {"Amiralitetstorget", "740040917"}
+};
 
+static const size_t STOPS_COUNT = sizeof(KARLSKRONA_STOPS) / sizeof(KARLSKRONA_STOPS[0]);
+
+static std::vector<DepartureEntry> live_departures;
 static lv_obj_t* list_container = nullptr;
 static char active_stop[32] = "Campus Gräsvik";
 static TransportType active_transport = TRANSPORT_ALL;
+static char live_status_msg[48] = "Waiting for sync...";
+
+static const char* get_stop_id_by_name(const char* name) {
+    for (size_t i = 0; i < STOPS_COUNT; i++) {
+        if (strcmp(KARLSKRONA_STOPS[i].name, name) == 0) {
+            return KARLSKRONA_STOPS[i].stop_id;
+        }
+    }
+    return KARLSKRONA_STOPS[0].stop_id; // Fallback to Campus Gräsvik
+}
+
+static TransportType parse_transport_mode(const String& mode) {
+    if (mode.equalsIgnoreCase("TRAIN")) return TRANSPORT_TRAIN;
+    if (mode.equalsIgnoreCase("FERRY") || mode.equalsIgnoreCase("BOAT") ||
+        mode.equalsIgnoreCase("WATER") || mode.equalsIgnoreCase("SHIP")) {
+        return TRANSPORT_FERRY;
+    }
+    return TRANSPORT_BUS;
+}
 
 static lv_color_t get_status_color(DepartureStatus status) {
     switch (status) {
@@ -49,7 +74,7 @@ static void render_row(lv_obj_t* parent, const DepartureEntry& item) {
     lv_obj_set_flex_flow(row, LV_FLEX_FLOW_ROW);
     lv_obj_set_flex_align(row, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
 
-    // row
+    // Line badge
     lv_obj_t* badge = lv_obj_create(row);
     lv_obj_set_size(badge, 40, 28);
     lv_obj_set_style_bg_color(badge, get_status_color(item.status), 0);
@@ -60,13 +85,13 @@ static void render_row(lv_obj_t* parent, const DepartureEntry& item) {
     lv_obj_clear_flag(badge, LV_OBJ_FLAG_SCROLLABLE);
 
     lv_obj_t* badge_lbl = lv_label_create(badge);
-    lv_label_set_text(badge_lbl, item.line);
+    lv_label_set_text(badge_lbl, item.line.c_str());
     lv_obj_set_style_text_color(badge_lbl, lv_color_white(), 0);
     lv_obj_center(badge_lbl);
 
     // Destination
     lv_obj_t* dest_lbl = lv_label_create(row);
-    lv_label_set_text(dest_lbl, item.destination);
+    lv_label_set_text(dest_lbl, item.destination.c_str());
     lv_obj_set_style_text_color(dest_lbl, lv_color_white(), 0);
     lv_obj_set_flex_grow(dest_lbl, 1);
     lv_obj_set_style_pad_left(dest_lbl, 8, 0);
@@ -90,43 +115,97 @@ static void render_row(lv_obj_t* parent, const DepartureEntry& item) {
     }
 
     lv_obj_t* time_lbl = lv_label_create(time_box);
-    lv_label_set_text(time_lbl, item.time);
+    lv_label_set_text(time_lbl, item.time.c_str());
     lv_obj_set_style_text_color(time_lbl, lv_color_white(), 0);
     lv_obj_center(time_lbl);
 }
 
-// function that redraws the timetable whenever its called on filter changes
+// Fetches live departures from Trafiklab for the active stop
+bool timetable_fetch_live_data(void) {
+    if (WiFi.status() != WL_CONNECTED) {
+        snprintf(live_status_msg, sizeof(live_status_msg), "Offline (No Wi-Fi)");
+        timetable_refresh_view();
+        return false;
+    }   
+
+    const char* stop_id = get_stop_id_by_name(active_stop);
+    std::vector<ApiDeparture> fetched = FetchParsedDepartures(stop_id, 15);
+
+    if (fetched.empty()) {
+        snprintf(live_status_msg, sizeof(live_status_msg), "API Error / No Data");
+        live_departures.clear();
+        timetable_refresh_view();
+        return false;
+    }
+
+    live_departures.clear();
+    for (const auto& d : fetched) {
+        DepartureEntry entry;
+        entry.origin = active_stop;
+        entry.destination = d.destination;
+        entry.line = d.line;
+        entry.time = d.time;
+        entry.transport_type = parse_transport_mode(d.transportMode);
+
+        if (d.isCancelled) {
+            entry.status = STATUS_CANCELLED;
+        } else if (d.isDelayed) {
+            entry.status = STATUS_DELAYED;
+        } else {
+            entry.status = STATUS_ON_TIME;
+        }
+        live_departures.push_back(entry);
+    }
+
+    unsigned long secs = millis() / 1000;
+    snprintf(live_status_msg, sizeof(live_status_msg), "Live OK (%u items @ %lus)", (unsigned)live_departures.size(), secs);
+    timetable_refresh_view();
+    return true;
+}
+
+const char* timetable_get_live_status(void) {
+    return live_status_msg;
+}
+
+// function that redraws the timetable whenever it's called on filter changes
 void timetable_refresh_view(void) {
     if (!list_container) return;
     lv_obj_clean(list_container);
 
     size_t matches = 0;
-    for (size_t i = 0; i < DEMO_COUNT; i++) {
-        bool match_stop = (strcmp(DEMO_DEPARTURES[i].origin, active_stop) == 0);
-        bool match_type = (active_transport == TRANSPORT_ALL) || 
-                          (DEMO_DEPARTURES[i].transport_type == active_transport);
+    for (size_t i = 0; i < live_departures.size(); i++) {
+        bool match_type = (active_transport == TRANSPORT_ALL) ||
+                          (live_departures[i].transport_type == active_transport);
 
-        if (match_stop && match_type) {
-            render_row(list_container, DEMO_DEPARTURES[i]);
+        if (match_type) {
+            render_row(list_container, live_departures[i]);
             matches++;
         }
     }
 
     if (matches == 0) {
         lv_obj_t* empty_lbl = lv_label_create(list_container);
-        lv_label_set_text(empty_lbl, "No departures found.");
+        lv_label_set_text(empty_lbl, WiFi.status() == WL_CONNECTED ? "No departures found." : "Wi-Fi disconnected.");
         lv_obj_set_style_text_color(empty_lbl, lv_color_hex(0x64748B), 0);
         lv_obj_align(empty_lbl, LV_ALIGN_CENTER, 0, 0);
     }
 }
 
-// sets the filter to active choices and calls to redraw
+// sets the filter to active choices and fetches new API data if stop changed
 void timetable_set_filter(const char* stop_name, TransportType transport_type) {
-    if (stop_name) {
+    bool stop_changed = false;
+    if (stop_name && strcmp(active_stop, stop_name) != 0) {
         strncpy(active_stop, stop_name, sizeof(active_stop) - 1);
+        active_stop[sizeof(active_stop) - 1] = '\0';
+        stop_changed = true;
     }
     active_transport = transport_type;
-    timetable_refresh_view();
+
+    if (stop_changed || live_departures.empty()) {
+        timetable_fetch_live_data();
+    } else {
+        timetable_refresh_view();
+    }
 }
 
 // original function to create the timetable screen

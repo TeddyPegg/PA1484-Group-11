@@ -1,6 +1,7 @@
 #include "ui_manager.h"
 #include "timetable.h"
 #include <Preferences.h>
+#include <WiFi.h>
 
 // Custom font (supports Å, Ä, Ö)
 LV_FONT_DECLARE(font_montserrat_16);
@@ -16,14 +17,18 @@ static lv_obj_t* scr_settings  = nullptr;
 static lv_obj_t* lbl_active_stop_header = nullptr;
 static lv_obj_t* dd_settings_stop       = nullptr;
 static lv_obj_t* dd_settings_transport  = nullptr;
+static lv_obj_t* lbl_wifi_status        = nullptr;
+static lv_obj_t* lbl_api_status         = nullptr;
 
-// predefined 5 stops
+// Predefined 7 Karlskrona stops
 static const char* STOPS_OPTIONS = 
     "Campus Gräsvik\n"
     "Karlskrona C\n"
     "Kungsplan\n"
     "Bergåsa Station\n"
-    "Lyckeby Centrum";
+    "Lyckeby Centrum\n"
+    "Handelshamnen\n"
+    "Amiralitetstorget";
 
 //transport types
 static const char* TRANSPORT_OPTIONS = 
@@ -31,6 +36,29 @@ static const char* TRANSPORT_OPTIONS =
     "Bus\n"
     "Train\n"
     "Ferry";
+
+// Update Wi-Fi and Live Data status labels on Settings screen
+void ui_update_status_labels(void) {
+    if (lbl_wifi_status) {
+        if (WiFi.status() == WL_CONNECTED) {
+            lv_label_set_text_fmt(lbl_wifi_status, "Wi-Fi:\nConnected (%s)", WiFi.SSID().c_str());
+            lv_obj_set_style_text_color(lbl_wifi_status, lv_color_hex(0x27AE60), 0);
+        } else {
+            lv_label_set_text(lbl_wifi_status, "Wi-Fi:\nDisconnected");
+            lv_obj_set_style_text_color(lbl_wifi_status, lv_color_hex(0xE74C3C), 0);
+        }
+    }
+
+    if (lbl_api_status) {
+        const char* status = timetable_get_live_status();
+        lv_label_set_text_fmt(lbl_api_status, "Data Status:\n%s", status);
+        if (strncmp(status, "Live OK", 7) == 0) {
+            lv_obj_set_style_text_color(lbl_api_status, lv_color_hex(0x27AE60), 0);
+        } else {
+            lv_obj_set_style_text_color(lbl_api_status, lv_color_hex(0xE67E22), 0);
+        }
+    }
+}
 
 // Synchronize filtered settings to the departure data screen
 static void sync_settings_to_timetable(void) {
@@ -42,6 +70,21 @@ static void sync_settings_to_timetable(void) {
         lv_label_set_text_fmt(lbl_active_stop_header, "Stop: %s", stop_buf);
     }
     timetable_set_filter(stop_buf, (TransportType)trans_idx);
+    ui_update_status_labels();
+}
+
+// Immediate filter/stop update when user changes dropdowns
+static void on_dropdown_changed(lv_event_t* e) {
+    (void)e;
+    sync_settings_to_timetable();
+}
+
+// Manual refresh button callback on Departure screen
+static void on_manual_refresh_clicked(lv_event_t* e) {
+    (void)e;
+    Serial.println("US4.2: Manual refresh triggered.");
+    timetable_fetch_live_data();
+    ui_update_status_labels();
 }
 
 // Save current settings to NVS
@@ -75,7 +118,6 @@ static void on_reset_clicked(lv_event_t* e) {
 }
 
 // Gesture callbacks for swiping
-
 static void group_screen_swipe(lv_event_t* e) {
     if (lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_LEFT) {
         ui_switch_to_timetable(false);
@@ -98,7 +140,7 @@ static void settings_screen_swipe(lv_event_t* e) {
 }
 
 void ui_init(void) {
-    // Screen 0: Start Screen (US1.1 / FR01)
+    // Screen 0: Start Screen
     scr_group = lv_obj_create(NULL);
     lv_obj_set_style_bg_color(scr_group, lv_color_hex(0x0F1117), 0);
     lv_obj_set_style_text_font(scr_group, &font_montserrat_16, 0);
@@ -145,7 +187,7 @@ void ui_init(void) {
     lv_obj_set_style_text_color(hint_group_sym, lv_color_hex(0x6E7681), 0);
     lv_obj_set_style_text_font(hint_group_sym, &lv_font_montserrat_16, 0); // built-in font so it shows symbols
 
-    // Screen 1: Departures Screen (US1.2A / FR02)
+    // Screen 1: Departures Screen
     scr_timetable = lv_obj_create(NULL);
     lv_obj_set_style_bg_color(scr_timetable, lv_color_hex(0x0F1117), 0);
     lv_obj_set_style_text_font(scr_timetable, &font_montserrat_16, 0);
@@ -163,6 +205,19 @@ void ui_init(void) {
     lv_label_set_text(lbl_active_stop_header, "Stop: Campus Gräsvik");
     lv_obj_set_style_text_color(lbl_active_stop_header, lv_color_white(), 0);
     lv_obj_align(lbl_active_stop_header, LV_ALIGN_LEFT_MID, 6, 0);
+
+    // Manual Refresh Button
+    lv_obj_t* btn_refresh = lv_btn_create(top_bar);
+    lv_obj_set_size(btn_refresh, 50, 40);
+    lv_obj_align(btn_refresh, LV_ALIGN_RIGHT_MID, -130, 0);
+    lv_obj_set_style_bg_color(btn_refresh, lv_color_hex(0x2563EB), 0);
+    lv_obj_set_style_pad_all(btn_refresh, 0, 0);
+    lv_obj_add_event_cb(btn_refresh, on_manual_refresh_clicked, LV_EVENT_CLICKED, NULL);
+
+    lv_obj_t* refresh_sym = lv_label_create(btn_refresh);
+    lv_label_set_text(refresh_sym, LV_SYMBOL_REFRESH);
+    lv_obj_set_style_text_font(refresh_sym, &lv_font_montserrat_16, 0);
+    lv_obj_center(refresh_sym);
 
     // Swipe hint container in timetable header
     lv_obj_t* hint_box_tt = lv_obj_create(top_bar);
@@ -214,7 +269,7 @@ void ui_init(void) {
     lv_obj_t* hint_st_sym = lv_label_create(hint_box_st);
     lv_label_set_text(hint_st_sym, LV_SYMBOL_LEFT " ");
     lv_obj_set_style_text_color(hint_st_sym, lv_color_hex(0x6E7681), 0);
-    lv_obj_set_style_text_font(hint_st_sym, &lv_font_montserrat_16, 0); // built-in font so it shows the symbols
+    lv_obj_set_style_text_font(hint_st_sym, &lv_font_montserrat_16, 0);
 
     lv_obj_t* hint_st_txt = lv_label_create(hint_box_st);
     lv_label_set_text(hint_st_txt, "Departures");
@@ -228,36 +283,56 @@ void ui_init(void) {
 
     // Select stop dropdown
     lv_obj_t* lbl_stop = lv_label_create(scr_settings);
-    lv_label_set_text(lbl_stop, "Select Stop (US3.2A):");
-    lv_obj_align(lbl_stop, LV_ALIGN_TOP_LEFT, 16, 56);
+    lv_label_set_text(lbl_stop, "Select Stop (US3.2B):");
+    lv_obj_align(lbl_stop, LV_ALIGN_TOP_LEFT, 16, 68);
     lv_obj_set_style_text_color(lbl_stop, lv_color_hex(0x94A3B8), 0);
 
     dd_settings_stop = lv_dropdown_create(scr_settings);
     lv_dropdown_set_options(dd_settings_stop, STOPS_OPTIONS);
-    lv_dropdown_set_symbol(dd_settings_stop, ""); // fixes missing arrow symbol
+    lv_dropdown_set_symbol(dd_settings_stop, "");
     lv_obj_set_size(dd_settings_stop, 210, 36);
-    lv_obj_align(dd_settings_stop, LV_ALIGN_TOP_LEFT, 16, 76);
+    lv_obj_align(dd_settings_stop, LV_ALIGN_TOP_LEFT, 16, 88);
     lv_obj_set_style_bg_color(dd_settings_stop, lv_color_hex(0x1F2430), 0);
     lv_obj_set_style_text_color(dd_settings_stop, lv_color_white(), 0);
+    lv_obj_add_event_cb(dd_settings_stop, on_dropdown_changed, LV_EVENT_VALUE_CHANGED, NULL);
 
     // Transport type dropdown
     lv_obj_t* lbl_trans = lv_label_create(scr_settings);
     lv_label_set_text(lbl_trans, "Transport Type (US3.3):");
-    lv_obj_align(lbl_trans, LV_ALIGN_TOP_LEFT, 16, 120);
+    lv_obj_align(lbl_trans, LV_ALIGN_TOP_LEFT, 16, 132);
     lv_obj_set_style_text_color(lbl_trans, lv_color_hex(0x94A3B8), 0);
 
     dd_settings_transport = lv_dropdown_create(scr_settings);
     lv_dropdown_set_options(dd_settings_transport, TRANSPORT_OPTIONS);
-    lv_dropdown_set_symbol(dd_settings_transport, ""); // fixes missing arrow symbol
+    lv_dropdown_set_symbol(dd_settings_transport, "");
     lv_obj_set_size(dd_settings_transport, 210, 36);
-    lv_obj_align(dd_settings_transport, LV_ALIGN_TOP_LEFT, 16, 140);
+    lv_obj_align(dd_settings_transport, LV_ALIGN_TOP_LEFT, 16, 152);
     lv_obj_set_style_bg_color(dd_settings_transport, lv_color_hex(0x1F2430), 0);
     lv_obj_set_style_text_color(dd_settings_transport, lv_color_white(), 0);
+    lv_obj_add_event_cb(dd_settings_transport, on_dropdown_changed, LV_EVENT_VALUE_CHANGED, NULL);
+    
+    // Status box on right side of settings
+    lv_obj_t* status_box = lv_obj_create(scr_settings);
+    lv_obj_set_size(status_box, 260, 120);
+    lv_obj_align(status_box, LV_ALIGN_TOP_RIGHT, -16, 68);
+    lv_obj_set_style_bg_color(status_box, lv_color_hex(0x161B22), 0);
+    lv_obj_set_style_border_color(status_box, lv_color_hex(0x30363D), 0);
+    lv_obj_set_style_radius(status_box, 8, 0);
+    lv_obj_set_style_pad_all(status_box, 8, 0);
+    lv_obj_clear_flag(status_box, LV_OBJ_FLAG_SCROLLABLE);
+
+    lbl_wifi_status = lv_label_create(status_box);
+    lv_obj_align(lbl_wifi_status, LV_ALIGN_TOP_LEFT, 0, 0);
+    lv_label_set_text(lbl_wifi_status, "Wi-Fi: Checking...");
+
+    lbl_api_status = lv_label_create(status_box);
+    lv_obj_align(lbl_api_status, LV_ALIGN_BOTTOM_LEFT, 0, 0);
+    lv_label_set_text(lbl_api_status, "Data Status: Checking...");
 
     // Save button
     lv_obj_t* btn_save = lv_btn_create(scr_settings);
-    lv_obj_set_size(btn_save, 96, 36);
-    lv_obj_align(btn_save, LV_ALIGN_BOTTOM_LEFT, 16, -14);
+    lv_obj_set_size(btn_save, 192, 72);
+    lv_obj_align(btn_save, LV_ALIGN_BOTTOM_LEFT, 16, -12);
     lv_obj_set_style_bg_color(btn_save, lv_color_hex(0x2563EB), 0);
     lv_obj_add_event_cb(btn_save, on_save_clicked, LV_EVENT_CLICKED, NULL);
 
@@ -267,8 +342,8 @@ void ui_init(void) {
 
     // Reset button
     lv_obj_t* btn_reset = lv_btn_create(scr_settings);
-    lv_obj_set_size(btn_reset, 96, 36);
-    lv_obj_align(btn_reset, LV_ALIGN_BOTTOM_RIGHT, -16, -14);
+    lv_obj_set_size(btn_reset, 192, 72);
+    lv_obj_align(btn_reset, LV_ALIGN_BOTTOM_RIGHT, -16, -12);
     lv_obj_set_style_bg_color(btn_reset, lv_color_hex(0xDC2626), 0);
     lv_obj_add_event_cb(btn_reset, on_reset_clicked, LV_EVENT_CLICKED, NULL);
 
@@ -276,11 +351,14 @@ void ui_init(void) {
     lv_label_set_text(reset_lbl, "Reset");
     lv_obj_center(reset_lbl);
 
-    // Load initial values
+    // Load initial values (clamp to 7 stops)
     preferences.begin("transit", true);
     uint16_t init_stop  = preferences.getUInt("stop_idx", 0);
     uint16_t init_trans = preferences.getUInt("trans_idx", 0);
     preferences.end();
+
+    if (init_stop >= 7) init_stop = 0;
+    if (init_trans >= 4) init_trans = 0;
 
     lv_dropdown_set_selected(dd_settings_stop, init_stop);
     lv_dropdown_set_selected(dd_settings_transport, init_trans);
@@ -298,6 +376,7 @@ void ui_switch_to_group(void) {
 
 void ui_switch_to_settings(void) {
     if (scr_settings) {
+        ui_update_status_labels();
         lv_scr_load_anim(scr_settings, LV_SCR_LOAD_ANIM_MOVE_LEFT, 200, 0, false);
     }
 }

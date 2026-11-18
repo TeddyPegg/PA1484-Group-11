@@ -10,3 +10,4 @@ void ui_init(void);
 void ui_switch_to_settings(void);
 void ui_switch_to_timetable(bool swipe_right);
 void ui_switch_to_group(void);
+void ui_update_status_labels(void);
